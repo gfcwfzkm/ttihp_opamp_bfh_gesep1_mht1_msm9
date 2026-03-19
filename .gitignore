@@ -9,3 +9,18 @@ test/sim_build
 test/__pycache__/
 test/results.xml
 test/gate_level_netlist.v
+corners/
+backups/
+drc_run_*/
+simulations/
+simulation/
+
+# Ignore JSON and NPZ files
+*.json
+*.npz
+
+# And ignore simulation data
+*.raw
+
+*_extracted.cir
+*.svg
