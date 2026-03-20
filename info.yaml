@@ -34,10 +34,10 @@ pinout:
   ui[7]: "DAC_7"
 
   # Outputs
-  uo[0]: "CIRC_DISABLED"
-  uo[1]: "CIRC_ACTIVE_1"
-  uo[2]: "CIRC_ACTIVE_2"
-  uo[3]: "CIRC_ACTIVE_3"
+  uo[0]: "CIRC_ACTIVE"
+  uo[1]: "CIRC_EFB_DISABLED"
+  uo[2]: "CIRC_FOL_DISABLED"
+  uo[3]: "CIRC_DAC_DISABLED"
   uo[4]: ""
   uo[5]: ""
   uo[6]: ""
@@ -54,9 +54,9 @@ pinout:
   uio[7]: ""
 
   # Analog pins - make sure to also set "analog_pins" above, else the pins won't be connected
-  ua[0]: "OUTA"
-  ua[1]: "INA"
-  ua[2]: "DD3"
+  ua[0]: "DD3"
+  ua[1]: "OUTA"
+  ua[2]: "INA"
   ua[3]: ""
   ua[4]: ""
   ua[5]: ""
