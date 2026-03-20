@@ -9,6 +9,8 @@ test/sim_build
 test/__pycache__/
 test/results.xml
 test/gate_level_netlist.v
+# Ignore any directory named "runs" anywhere in the repository, including its contents
+#runs/
 corners/
 backups/
 drc_run_*/
