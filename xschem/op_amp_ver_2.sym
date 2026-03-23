@@ -1,0 +1,35 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+F {}
+E {}
+L 4 -30 50 -30 70 {}
+L 4 -70 -20 -50 -20 {}
+L 4 80 0 100 0 {}
+L 4 -70 20 -50 20 {}
+L 4 -30 -70 -30 -50 {}
+L 4 -44 -20 -32 -20 {}
+L 4 -44 20 -30 20 {}
+L 4 -37 13 -37 27 {}
+L 7 10 -50 10 -30 {}
+L 7 10 30 10 50 {}
+B 5 7.5 -52.5 12.5 -47.5 {name=POAVDD dir=inout}
+B 5 -32.5 67.5 -27.5 72.5 {name=IOAIREF dir=in}
+B 5 -72.5 -22.5 -67.5 -17.5 {name=IOAM dir=in}
+B 5 97.5 -2.5 102.5 2.5 {name=OOA dir=out}
+B 5 -72.5 17.5 -67.5 22.5 {name=IOAP dir=in}
+B 5 7.5 47.5 12.5 52.5 {name=POAVSS dir=inout}
+B 5 -32.5 -72.5 -27.5 -67.5 {name=IOADISABLE dir=in}
+P 4 4 80 -0 -50 -60 -50 60 80 -0 {}
+T {@symname} -45 -6 0 0 0.3 0.3 {}
+T {@name} 85 -42 0 0 0.2 0.2 {}
+T {POAVDD} 56 -45 0 1 0.2 0.2 {}
+T {IOAIREF} -25 56 0 0 0.2 0.2 {}
+T {OOA} 95 -14 0 1 0.2 0.2 {}
+T {POAVSS} 55 34 0 1 0.2 0.2 {}
+T {IOADISABLE} 15 -56 2 0 0.2 0.2 {}

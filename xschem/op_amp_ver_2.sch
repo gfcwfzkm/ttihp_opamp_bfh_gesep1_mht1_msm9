@@ -1,0 +1,1816 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {}
+V {}
+S {}
+F {}
+E {}
+L 4 1920 -1010 1940 -1030 {}
+L 4 1940 -1030 2600 -1030 {}
+L 4 2600 -1030 2620 -1010 {}
+L 4 3800 -1060 3820 -1040 {}
+L 4 2940 -1060 3800 -1060 {}
+L 4 2920 -1040 2940 -1060 {}
+L 4 3790 -470 3810 -450 {}
+L 4 3270 -470 3790 -470 {}
+L 4 3250 -450 3270 -470 {}
+L 4 2930 -200 2950 -220 {}
+L 4 2950 -220 3170 -220 {}
+L 4 3170 -220 3190 -200 {}
+L 4 3870 -1040 3890 -1060 {}
+L 4 3890 -1060 4120 -1060 {}
+L 4 4120 -1060 4140 -1040 {}
+L 4 4190 -1040 4210 -1060 {}
+L 4 4210 -1060 4440 -1060 {}
+L 4 4440 -1060 4460 -1040 {}
+T {Operational Amplifiers: Theory and Design
+By Johan Huijsing
+Page 259, Chapter 7.7.2 "Compact 2V R-R-Out CMOS Class AB OpAmp with MC"} 1950 -1090 0 0 0.3 0.3 {}
+T {Dummy and filler transistors on current mirror/cascode} 3170 -1080 0 0 0.3 0.3 {}
+T {Dummy transistors around N1/N2 (Diff. Pair)} 3370 -490 0 0 0.3 0.3 {}
+T {Dummy Transistor N20-N22
+ (IBIAS Current Mirror)} 2950 -260 0 0 0.3 0.3 {}
+T {Dummy Transistors around
+'voltage drop' biasing stage} 3890 -1100 0 0 0.3 0.3 {}
+T {Dummy Transistors
+on the output stage} 4250 -1100 0 0 0.3 0.3 {}
+T {The above dummies are close to transistors, that don't use nbias} 3570 -510 0 0 0.15 0.15 {}
+T {Note: Some NMOS dummy transistors repurposed to deactivate the circuit} 2920 -790 0 0 0.3 0.3 {}
+T {PMOS transistors to deactivate the circuit} 2920 -1270 0 0 0.3 0.3 {}
+N 1100 -1000 1110 -1000 {lab=POAVDD}
+N 1100 -770 1110 -770 {lab=POAVDD}
+N 1100 -910 1100 -770 {lab=POAVDD}
+N 930 -190 1110 -190 {lab=POAVSS}
+N 1110 -1000 1110 -940 {lab=POAVDD}
+N 1110 -840 1110 -800 {lab=#net1}
+N 1100 -910 1110 -910 {lab=POAVDD}
+N 1100 -1000 1100 -910 {lab=POAVDD}
+N 1110 -840 1170 -840 {lab=#net1}
+N 1110 -880 1110 -840 {lab=#net1}
+N 1170 -910 1170 -840 {lab=#net1}
+N 1150 -910 1170 -910 {lab=#net1}
+N 1110 -190 1120 -190 {lab=POAVSS}
+N 1110 -420 1120 -420 {lab=POAVSS}
+N 1120 -280 1120 -190 {lab=POAVSS}
+N 1110 -280 1120 -280 {lab=POAVSS}
+N 1120 -420 1120 -280 {lab=POAVSS}
+N 1110 -390 1110 -310 {lab=#net2}
+N 1110 -250 1110 -190 {lab=POAVSS}
+N 1150 -770 1170 -770 {lab=ptlg}
+N 1170 -770 1170 -710 {lab=ptlg}
+N 1110 -710 1170 -710 {lab=ptlg}
+N 1110 -740 1110 -710 {lab=ptlg}
+N 1280 -350 1280 -310 {lab=#net3}
+N 1220 -280 1240 -280 {lab=#net3}
+N 1220 -350 1220 -280 {lab=#net3}
+N 1220 -350 1280 -350 {lab=#net3}
+N 1280 -390 1280 -350 {lab=#net3}
+N 1220 -420 1240 -420 {lab=ntlg}
+N 1220 -480 1220 -420 {lab=ntlg}
+N 1220 -480 1280 -480 {lab=ntlg}
+N 1280 -480 1280 -450 {lab=ntlg}
+N 1120 -190 1280 -190 {lab=POAVSS}
+N 1280 -250 1280 -190 {lab=POAVSS}
+N 1220 -770 1240 -770 {lab=pcasc}
+N 1220 -820 1220 -770 {lab=pcasc}
+N 1220 -910 1240 -910 {lab=pbias}
+N 1220 -910 1220 -860 {lab=pbias}
+N 1280 -770 1290 -770 {lab=POAVDD}
+N 1290 -910 1290 -770 {lab=POAVDD}
+N 1280 -910 1290 -910 {lab=POAVDD}
+N 1110 -1000 1280 -1000 {lab=POAVDD}
+N 1280 -1000 1280 -940 {lab=POAVDD}
+N 1290 -1000 1290 -910 {lab=POAVDD}
+N 1280 -1000 1290 -1000 {lab=POAVDD}
+N 1280 -190 1290 -190 {lab=POAVSS}
+N 1290 -280 1290 -190 {lab=POAVSS}
+N 1280 -420 1290 -420 {lab=POAVSS}
+N 1280 -280 1290 -280 {lab=POAVSS}
+N 1290 -420 1290 -280 {lab=POAVSS}
+N 1220 -860 1500 -860 {lab=pbias}
+N 1220 -820 1930 -820 {lab=pcasc}
+N 1780 -1000 1780 -940 {lab=POAVDD}
+N 1570 -1000 1780 -1000 {lab=POAVDD}
+N 1560 -1000 1560 -940 {lab=POAVDD}
+N 1560 -910 1570 -910 {lab=POAVDD}
+N 1570 -1000 1570 -910 {lab=POAVDD}
+N 1560 -1000 1570 -1000 {lab=POAVDD}
+N 1780 -910 1790 -910 {lab=POAVDD}
+N 1790 -1000 1790 -910 {lab=POAVDD}
+N 1780 -1000 1790 -1000 {lab=POAVDD}
+N 1500 -910 1520 -910 {lab=pbias}
+N 1500 -910 1500 -860 {lab=pbias}
+N 1500 -860 1720 -860 {lab=pbias}
+N 1720 -910 1720 -860 {lab=pbias}
+N 1720 -910 1740 -910 {lab=pbias}
+N 1670 -390 1670 -310 {lab=#net4}
+N 1560 -570 1560 -520 {lab=#net5}
+N 1670 -520 1780 -520 {lab=#net5}
+N 1780 -570 1780 -520 {lab=#net5}
+N 1670 -520 1670 -450 {lab=#net5}
+N 1560 -520 1670 -520 {lab=#net5}
+N 1610 -420 1610 -370 {lab=ncasc}
+N 1610 -420 1630 -420 {lab=ncasc}
+N 1610 -330 1610 -280 {lab=nbias}
+N 1610 -280 1630 -280 {lab=nbias}
+N 1670 -420 1680 -420 {lab=POAVSS}
+N 1680 -420 1680 -280 {lab=POAVSS}
+N 1670 -280 1680 -280 {lab=POAVSS}
+N 1290 -190 1670 -190 {lab=POAVSS}
+N 1670 -250 1670 -190 {lab=POAVSS}
+N 1670 -190 1680 -190 {lab=POAVSS}
+N 1680 -280 1680 -190 {lab=POAVSS}
+N 1490 -600 1520 -600 {lab=IOAM}
+N 1820 -600 1850 -600 {lab=IOAP}
+N 1680 -600 1780 -600 {lab=POAVSS}
+N 1680 -600 1680 -420 {lab=POAVSS}
+N 1560 -600 1680 -600 {lab=POAVSS}
+N 2190 -190 2200 -190 {lab=POAVSS}
+N 2200 -280 2200 -190 {lab=POAVSS}
+N 2190 -420 2200 -420 {lab=POAVSS}
+N 2190 -280 2200 -280 {lab=POAVSS}
+N 2200 -420 2200 -280 {lab=POAVSS}
+N 1980 -420 1990 -420 {lab=POAVSS}
+N 2190 -250 2190 -190 {lab=POAVSS}
+N 2190 -390 2190 -310 {lab=#net6}
+N 1990 -390 1990 -310 {lab=#net7}
+N 1990 -250 1990 -190 {lab=POAVSS}
+N 1990 -190 2190 -190 {lab=POAVSS}
+N 2070 -420 2150 -420 {lab=ncasc}
+N 1980 -190 1990 -190 {lab=POAVSS}
+N 2070 -420 2070 -370 {lab=ncasc}
+N 1980 -280 1980 -190 {lab=POAVSS}
+N 1980 -280 1990 -280 {lab=POAVSS}
+N 1980 -420 1980 -280 {lab=POAVSS}
+N 2030 -420 2070 -420 {lab=ncasc}
+N 1610 -370 2070 -370 {lab=ncasc}
+N 2110 -280 2150 -280 {lab=#net8}
+N 2030 -280 2110 -280 {lab=#net8}
+N 2110 -490 2110 -280 {lab=#net8}
+N 1990 -490 2110 -490 {lab=#net8}
+N 1990 -490 1990 -450 {lab=#net8}
+N 1930 -820 1930 -770 {lab=pcasc}
+N 1930 -770 1950 -770 {lab=pcasc}
+N 1930 -910 1950 -910 {lab=pbias}
+N 1720 -860 1930 -860 {lab=pbias}
+N 1930 -910 1930 -860 {lab=pbias}
+N 1990 -740 1990 -490 {lab=#net8}
+N 1990 -910 2000 -910 {lab=POAVDD}
+N 2000 -910 2000 -770 {lab=POAVDD}
+N 1990 -770 2000 -770 {lab=POAVDD}
+N 1990 -1000 2000 -1000 {lab=POAVDD}
+N 2000 -1000 2000 -910 {lab=POAVDD}
+N 1990 -1000 1990 -940 {lab=POAVDD}
+N 1790 -1000 1990 -1000 {lab=POAVDD}
+N 1560 -850 1990 -850 {lab=#net9}
+N 1990 -850 1990 -800 {lab=#net9}
+N 1560 -880 1560 -850 {lab=#net9}
+N 1990 -880 1990 -850 {lab=#net9}
+N 1780 -830 2190 -830 {lab=#net10}
+N 1780 -880 1780 -830 {lab=#net10}
+N 2130 -760 2150 -760 {lab=pcasc}
+N 2130 -820 2130 -760 {lab=pcasc}
+N 1930 -820 2130 -820 {lab=pcasc}
+N 1930 -860 2130 -860 {lab=pbias}
+N 2130 -910 2130 -860 {lab=pbias}
+N 2130 -910 2150 -910 {lab=pbias}
+N 2190 -1000 2200 -1000 {lab=POAVDD}
+N 2200 -910 2200 -760 {lab=POAVDD}
+N 2190 -760 2200 -760 {lab=POAVDD}
+N 2190 -830 2190 -790 {lab=#net10}
+N 2190 -910 2200 -910 {lab=POAVDD}
+N 2200 -1000 2200 -910 {lab=POAVDD}
+N 2190 -1000 2190 -940 {lab=POAVDD}
+N 2000 -1000 2190 -1000 {lab=POAVDD}
+N 2190 -880 2190 -830 {lab=#net10}
+N 2190 -680 2190 -660 {lab=pdrive}
+N 2460 -680 2570 -680 {lab=pdrive}
+N 2190 -730 2190 -680 {lab=pdrive}
+N 2290 -680 2290 -590 {lab=pdrive}
+N 2290 -530 2290 -510 {lab=ndrive}
+N 2460 -510 2570 -510 {lab=ndrive}
+N 2190 -600 2190 -510 {lab=ndrive}
+N 2190 -510 2190 -450 {lab=ndrive}
+N 2100 -630 2150 -630 {lab=ptlg}
+N 2460 -680 2460 -670 {lab=pdrive}
+N 2460 -600 2460 -580 {lab=OOA}
+N 2460 -520 2460 -510 {lab=ndrive}
+N 2610 -600 2610 -540 {lab=OOA}
+N 2610 -510 2620 -510 {lab=POAVSS}
+N 2620 -510 2620 -190 {lab=POAVSS}
+N 2610 -190 2620 -190 {lab=POAVSS}
+N 2610 -480 2610 -190 {lab=POAVSS}
+N 2610 -1000 2610 -710 {lab=POAVDD}
+N 2610 -680 2620 -680 {lab=POAVDD}
+N 2620 -1000 2620 -680 {lab=POAVDD}
+N 2610 -1000 2620 -1000 {lab=POAVDD}
+N 2190 -510 2290 -510 {lab=ndrive}
+N 2190 -680 2290 -680 {lab=pdrive}
+N 2100 -560 2250 -560 {lab=ntlg}
+N 2290 -560 2300 -560 {lab=POAVSS}
+N 2300 -560 2300 -500 {lab=POAVSS}
+N 2200 -500 2300 -500 {lab=POAVSS}
+N 2200 -500 2200 -420 {lab=POAVSS}
+N 2200 -760 2200 -630 {lab=POAVDD}
+N 2190 -630 2200 -630 {lab=POAVDD}
+N 2610 -600 2680 -600 {lab=OOA}
+N 2610 -650 2610 -600 {lab=OOA}
+N 1680 -190 1980 -190 {lab=POAVSS}
+N 1110 -710 1110 -450 {lab=ptlg}
+N 1280 -740 1280 -480 {lab=ntlg}
+N 1560 -850 1560 -630 {lab=#net9}
+N 1780 -830 1780 -630 {lab=#net10}
+N 1170 -710 1360 -710 {lab=ptlg}
+N 1280 -480 1360 -480 {lab=ntlg}
+N 2460 -600 2610 -600 {lab=OOA}
+N 2460 -610 2460 -600 {lab=OOA}
+N 1280 -880 1280 -800 {lab=#net11}
+N 1290 -1000 1560 -1000 {lab=POAVDD}
+N 310 -280 360 -280 {lab=IOAIREF}
+N 510 -280 530 -280 {lab=IOAIREF}
+N 510 -330 510 -280 {lab=IOAIREF}
+N 310 -330 510 -330 {lab=IOAIREF}
+N 310 -330 310 -280 {lab=IOAIREF}
+N 260 -280 310 -280 {lab=IOAIREF}
+N 480 -790 480 -770 {lab=pcasc}
+N 480 -770 530 -770 {lab=pcasc}
+N 480 -710 480 -660 {lab=pcasc}
+N 660 -910 720 -910 {lab=pbias}
+N 610 -910 660 -910 {lab=pbias}
+N 570 -710 660 -710 {lab=pbias}
+N 570 -740 570 -710 {lab=pbias}
+N 660 -860 660 -710 {lab=pbias}
+N 570 -880 570 -800 {lab=#net12}
+N 560 -910 570 -910 {lab=POAVDD}
+N 560 -1000 560 -910 {lab=POAVDD}
+N 760 -1000 760 -940 {lab=POAVDD}
+N 570 -1000 760 -1000 {lab=POAVDD}
+N 770 -1000 770 -910 {lab=POAVDD}
+N 760 -1000 770 -1000 {lab=POAVDD}
+N 760 -910 770 -910 {lab=POAVDD}
+N 760 -770 770 -770 {lab=POAVDD}
+N 560 -910 560 -860 {lab=POAVDD}
+N 560 -860 580 -830 {lab=POAVDD}
+N 580 -830 580 -770 {lab=POAVDD}
+N 570 -770 580 -770 {lab=POAVDD}
+N 660 -910 660 -860 {lab=pbias}
+N 920 -770 930 -770 {lab=POAVDD}
+N 920 -910 920 -770 {lab=POAVDD}
+N 920 -910 930 -910 {lab=POAVDD}
+N 920 -1000 920 -910 {lab=POAVDD}
+N 930 -1000 930 -940 {lab=POAVDD}
+N 920 -1000 930 -1000 {lab=POAVDD}
+N 970 -910 990 -910 {lab=pbias}
+N 990 -910 990 -860 {lab=pbias}
+N 660 -860 990 -860 {lab=pbias}
+N 970 -770 990 -770 {lab=pcasc}
+N 990 -820 990 -770 {lab=pcasc}
+N 700 -820 990 -820 {lab=pcasc}
+N 700 -770 720 -770 {lab=pcasc}
+N 700 -820 700 -770 {lab=pcasc}
+N 480 -820 700 -820 {lab=pcasc}
+N 1020 -330 1020 -280 {lab=nbias}
+N 970 -280 1020 -280 {lab=nbias}
+N 990 -860 1220 -860 {lab=pbias}
+N 990 -820 1220 -820 {lab=pcasc}
+N 1020 -330 1610 -330 {lab=nbias}
+N 1020 -280 1070 -280 {lab=nbias}
+N 1050 -370 1610 -370 {lab=ncasc}
+N 850 -400 850 -370 {lab=ncasc}
+N 930 -390 930 -310 {lab=#net13}
+N 920 -280 920 -190 {lab=POAVSS}
+N 930 -250 930 -190 {lab=POAVSS}
+N 920 -190 930 -190 {lab=POAVSS}
+N 920 -280 930 -280 {lab=POAVSS}
+N 400 -280 410 -280 {lab=POAVSS}
+N 410 -280 410 -190 {lab=POAVSS}
+N 400 -190 410 -190 {lab=POAVSS}
+N 400 -250 400 -190 {lab=POAVSS}
+N 220 -190 400 -190 {lab=POAVSS}
+N 570 -280 580 -280 {lab=POAVSS}
+N 580 -280 580 -190 {lab=POAVSS}
+N 570 -190 580 -190 {lab=POAVSS}
+N 570 -250 570 -190 {lab=POAVSS}
+N 410 -190 570 -190 {lab=POAVSS}
+N 210 -280 220 -280 {lab=POAVSS}
+N 210 -280 210 -190 {lab=POAVSS}
+N 220 -250 220 -190 {lab=POAVSS}
+N 210 -190 220 -190 {lab=POAVSS}
+N 570 -710 570 -310 {lab=pbias}
+N 930 -740 930 -490 {lab=nbias}
+N 930 -490 930 -450 {lab=nbias}
+N 220 -330 220 -310 {lab=IOAIREF}
+N 220 -330 310 -330 {lab=IOAIREF}
+N 850 -420 890 -420 {lab=ncasc}
+N 920 -330 920 -280 {lab=POAVSS}
+N 920 -330 940 -360 {lab=POAVSS}
+N 940 -420 940 -360 {lab=POAVSS}
+N 930 -420 940 -420 {lab=POAVSS}
+N 1020 -490 1020 -330 {lab=nbias}
+N 930 -490 1020 -490 {lab=nbias}
+N 1050 -420 1070 -420 {lab=ncasc}
+N 1050 -420 1050 -370 {lab=ncasc}
+N 850 -370 1050 -370 {lab=ncasc}
+N 770 -1000 920 -1000 {lab=POAVDD}
+N 770 -910 770 -770 {lab=POAVDD}
+N 930 -880 930 -800 {lab=#net14}
+N 570 -1000 570 -940 {lab=POAVDD}
+N 560 -1000 570 -1000 {lab=POAVDD}
+N 760 -880 760 -800 {lab=#net15}
+N 930 -1000 1100 -1000 {lab=POAVDD}
+N 400 -1000 560 -1000 {lab=POAVDD}
+N 760 -190 920 -190 {lab=POAVSS}
+N 850 -320 850 -240 {lab=ncasc}
+N 400 -1000 400 -980 {lab=POAVDD}
+N 390 -1000 400 -1000 {lab=POAVDD}
+N 400 -920 400 -900 {lab=#net16}
+N 400 -840 400 -820 {lab=#net17}
+N 400 -760 400 -740 {lab=#net18}
+N 400 -660 400 -310 {lab=pcasc}
+N 400 -660 480 -660 {lab=pcasc}
+N 400 -680 400 -660 {lab=pcasc}
+N 440 -950 480 -950 {lab=pcasc}
+N 480 -870 480 -820 {lab=pcasc}
+N 440 -870 480 -870 {lab=pcasc}
+N 480 -950 480 -870 {lab=pcasc}
+N 440 -790 480 -790 {lab=pcasc}
+N 480 -820 480 -790 {lab=pcasc}
+N 440 -710 480 -710 {lab=pcasc}
+N 480 -770 480 -710 {lab=pcasc}
+N 390 -710 400 -710 {lab=POAVDD}
+N 390 -790 390 -710 {lab=POAVDD}
+N 390 -950 400 -950 {lab=POAVDD}
+N 390 -1000 390 -950 {lab=POAVDD}
+N 390 -870 400 -870 {lab=POAVDD}
+N 390 -950 390 -870 {lab=POAVDD}
+N 390 -790 400 -790 {lab=POAVDD}
+N 390 -870 390 -790 {lab=POAVDD}
+N 850 -480 850 -420 {lab=ncasc}
+N 760 -610 850 -610 {lab=ncasc}
+N 750 -240 750 -190 {lab=POAVSS}
+N 580 -190 750 -190 {lab=POAVSS}
+N 760 -210 760 -190 {lab=POAVSS}
+N 750 -190 760 -190 {lab=POAVSS}
+N 750 -240 760 -240 {lab=POAVSS}
+N 750 -320 750 -240 {lab=POAVSS}
+N 760 -290 760 -270 {lab=#net19}
+N 750 -320 760 -320 {lab=POAVSS}
+N 750 -400 750 -320 {lab=POAVSS}
+N 760 -370 760 -350 {lab=#net20}
+N 800 -320 850 -320 {lab=ncasc}
+N 850 -370 850 -320 {lab=ncasc}
+N 800 -240 850 -240 {lab=ncasc}
+N 800 -400 850 -400 {lab=ncasc}
+N 850 -420 850 -400 {lab=ncasc}
+N 750 -400 760 -400 {lab=POAVSS}
+N 760 -610 760 -590 {lab=ncasc}
+N 750 -560 760 -560 {lab=POAVSS}
+N 750 -480 750 -400 {lab=POAVSS}
+N 750 -480 760 -480 {lab=POAVSS}
+N 750 -560 750 -480 {lab=POAVSS}
+N 760 -450 760 -430 {lab=#net21}
+N 760 -530 760 -510 {lab=#net22}
+N 800 -560 850 -560 {lab=ncasc}
+N 850 -610 850 -560 {lab=ncasc}
+N 800 -480 850 -480 {lab=ncasc}
+N 850 -560 850 -480 {lab=ncasc}
+N 760 -740 760 -610 {lab=ncasc}
+N 120 -660 220 -660 {lab=IOAIREF}
+N 2990 -1030 2990 -1010 {lab=POAVDD}
+N 3150 -1030 3150 -1010 {lab=POAVDD}
+N 3090 -980 3090 -930 {lab=pbias}
+N 3000 -1030 3150 -1030 {lab=POAVDD}
+N 2990 -980 3000 -980 {lab=POAVDD}
+N 3000 -1030 3000 -980 {lab=POAVDD}
+N 2990 -1030 3000 -1030 {lab=POAVDD}
+N 3150 -980 3160 -980 {lab=POAVDD}
+N 3160 -1030 3160 -980 {lab=POAVDD}
+N 3150 -1030 3160 -1030 {lab=POAVDD}
+N 3090 -980 3110 -980 {lab=pbias}
+N 2910 -1030 2990 -1030 {lab=POAVDD}
+N 2930 -980 2950 -980 {lab=pbias}
+N 2990 -860 3000 -860 {lab=POAVDD}
+N 3150 -860 3160 -860 {lab=POAVDD}
+N 3310 -860 3320 -860 {lab=POAVDD}
+N 3470 -860 3480 -860 {lab=POAVDD}
+N 2990 -540 2990 -520 {lab=POAVSS}
+N 2930 -570 2950 -570 {lab=nbias}
+N 2990 -570 3000 -570 {lab=POAVSS}
+N 3000 -570 3000 -520 {lab=POAVSS}
+N 2990 -520 3000 -520 {lab=POAVSS}
+N 3150 -540 3150 -520 {lab=POAVSS}
+N 3000 -520 3150 -520 {lab=POAVSS}
+N 3090 -570 3110 -570 {lab=nbias}
+N 3090 -620 3090 -570 {lab=nbias}
+N 3150 -570 3160 -570 {lab=POAVSS}
+N 3160 -570 3160 -520 {lab=POAVSS}
+N 3150 -520 3160 -520 {lab=POAVSS}
+N 2990 -690 3000 -690 {lab=POAVSS}
+N 3150 -690 3160 -690 {lab=POAVSS}
+N 3310 -690 3320 -690 {lab=POAVSS}
+N 3470 -690 3480 -690 {lab=POAVSS}
+N 3480 -610 3480 -570 {lab=POAVSS}
+N 3310 -1030 3320 -1030 {lab=POAVDD}
+N 3320 -900 3320 -860 {lab=POAVDD}
+N 3310 -980 3320 -980 {lab=POAVDD}
+N 3320 -1030 3320 -980 {lab=POAVDD}
+N 3310 -1030 3310 -1010 {lab=POAVDD}
+N 3160 -1030 3310 -1030 {lab=POAVDD}
+N 3470 -1030 3480 -1030 {lab=POAVDD}
+N 3480 -900 3480 -860 {lab=POAVDD}
+N 3470 -1030 3470 -1010 {lab=POAVDD}
+N 3320 -1030 3470 -1030 {lab=POAVDD}
+N 3470 -980 3480 -980 {lab=POAVDD}
+N 3480 -1030 3480 -980 {lab=POAVDD}
+N 3410 -980 3430 -980 {lab=pbias}
+N 3410 -980 3410 -930 {lab=pbias}
+N 3250 -930 3410 -930 {lab=pbias}
+N 3250 -980 3250 -930 {lab=pbias}
+N 3250 -980 3270 -980 {lab=pbias}
+N 3310 -570 3320 -570 {lab=POAVSS}
+N 3320 -610 3320 -570 {lab=POAVSS}
+N 3470 -570 3480 -570 {lab=POAVSS}
+N 3250 -570 3270 -570 {lab=nbias}
+N 3250 -620 3250 -570 {lab=nbias}
+N 3250 -620 3410 -620 {lab=nbias}
+N 3410 -620 3410 -570 {lab=nbias}
+N 3410 -570 3430 -570 {lab=nbias}
+N 3470 -540 3470 -520 {lab=POAVSS}
+N 3320 -520 3470 -520 {lab=POAVSS}
+N 3310 -540 3310 -520 {lab=POAVSS}
+N 3160 -520 3310 -520 {lab=POAVSS}
+N 3320 -570 3320 -520 {lab=POAVSS}
+N 3310 -520 3320 -520 {lab=POAVSS}
+N 3480 -570 3480 -520 {lab=POAVSS}
+N 3470 -520 3480 -520 {lab=POAVSS}
+N 3320 -440 3320 -420 {lab=POAVSS}
+N 3260 -440 3320 -440 {lab=POAVSS}
+N 3320 -390 3330 -390 {lab=POAVSS}
+N 3330 -390 3330 -340 {lab=POAVSS}
+N 3320 -340 3330 -340 {lab=POAVSS}
+N 3260 -390 3260 -340 {lab=POAVSS}
+N 3320 -360 3320 -340 {lab=POAVSS}
+N 3260 -340 3320 -340 {lab=POAVSS}
+N 3260 -390 3280 -390 {lab=POAVSS}
+N 3260 -440 3260 -390 {lab=POAVSS}
+N 3480 -440 3480 -420 {lab=POAVSS}
+N 3420 -440 3480 -440 {lab=POAVSS}
+N 3480 -390 3490 -390 {lab=POAVSS}
+N 3490 -390 3490 -340 {lab=POAVSS}
+N 3480 -340 3490 -340 {lab=POAVSS}
+N 3420 -390 3420 -340 {lab=POAVSS}
+N 3480 -360 3480 -340 {lab=POAVSS}
+N 3420 -340 3480 -340 {lab=POAVSS}
+N 3420 -390 3440 -390 {lab=POAVSS}
+N 3420 -440 3420 -390 {lab=POAVSS}
+N 3330 -340 3420 -340 {lab=POAVSS}
+N 3640 -440 3640 -420 {lab=POAVSS}
+N 3580 -440 3640 -440 {lab=POAVSS}
+N 3640 -390 3650 -390 {lab=POAVSS}
+N 3650 -390 3650 -340 {lab=POAVSS}
+N 3640 -340 3650 -340 {lab=POAVSS}
+N 3580 -390 3580 -340 {lab=POAVSS}
+N 3640 -360 3640 -340 {lab=POAVSS}
+N 3580 -340 3640 -340 {lab=POAVSS}
+N 3580 -390 3600 -390 {lab=POAVSS}
+N 3580 -440 3580 -390 {lab=POAVSS}
+N 3490 -340 3580 -340 {lab=POAVSS}
+N 3800 -440 3800 -420 {lab=POAVSS}
+N 3740 -440 3800 -440 {lab=POAVSS}
+N 3800 -390 3810 -390 {lab=POAVSS}
+N 3810 -390 3810 -340 {lab=POAVSS}
+N 3800 -340 3810 -340 {lab=POAVSS}
+N 3740 -390 3740 -340 {lab=POAVSS}
+N 3800 -360 3800 -340 {lab=POAVSS}
+N 3740 -340 3800 -340 {lab=POAVSS}
+N 3740 -390 3760 -390 {lab=POAVSS}
+N 3740 -440 3740 -390 {lab=POAVSS}
+N 3650 -340 3740 -340 {lab=POAVSS}
+N 3320 -320 3320 -300 {lab=POAVSS}
+N 3260 -320 3320 -320 {lab=POAVSS}
+N 3260 -340 3260 -320 {lab=POAVSS}
+N 3320 -270 3330 -270 {lab=POAVSS}
+N 3330 -270 3330 -220 {lab=POAVSS}
+N 3320 -220 3330 -220 {lab=POAVSS}
+N 3320 -240 3320 -220 {lab=POAVSS}
+N 3260 -220 3320 -220 {lab=POAVSS}
+N 3260 -270 3280 -270 {lab=POAVSS}
+N 3260 -320 3260 -270 {lab=POAVSS}
+N 3480 -320 3480 -300 {lab=POAVSS}
+N 3420 -320 3480 -320 {lab=POAVSS}
+N 3480 -270 3490 -270 {lab=POAVSS}
+N 3490 -270 3490 -220 {lab=POAVSS}
+N 3480 -220 3490 -220 {lab=POAVSS}
+N 3420 -270 3420 -220 {lab=POAVSS}
+N 3480 -240 3480 -220 {lab=POAVSS}
+N 3420 -220 3480 -220 {lab=POAVSS}
+N 3420 -270 3440 -270 {lab=POAVSS}
+N 3420 -320 3420 -270 {lab=POAVSS}
+N 3330 -220 3420 -220 {lab=POAVSS}
+N 3640 -320 3640 -300 {lab=POAVSS}
+N 3580 -320 3640 -320 {lab=POAVSS}
+N 3640 -270 3650 -270 {lab=POAVSS}
+N 3650 -270 3650 -220 {lab=POAVSS}
+N 3640 -220 3650 -220 {lab=POAVSS}
+N 3580 -270 3580 -220 {lab=POAVSS}
+N 3640 -240 3640 -220 {lab=POAVSS}
+N 3580 -220 3640 -220 {lab=POAVSS}
+N 3580 -270 3600 -270 {lab=POAVSS}
+N 3580 -320 3580 -270 {lab=POAVSS}
+N 3490 -220 3580 -220 {lab=POAVSS}
+N 3800 -320 3800 -300 {lab=POAVSS}
+N 3740 -320 3800 -320 {lab=POAVSS}
+N 3800 -270 3810 -270 {lab=POAVSS}
+N 3810 -270 3810 -220 {lab=POAVSS}
+N 3800 -220 3810 -220 {lab=POAVSS}
+N 3740 -270 3740 -220 {lab=POAVSS}
+N 3800 -240 3800 -220 {lab=POAVSS}
+N 3740 -220 3800 -220 {lab=POAVSS}
+N 3740 -270 3760 -270 {lab=POAVSS}
+N 3740 -320 3740 -270 {lab=POAVSS}
+N 3650 -220 3740 -220 {lab=POAVSS}
+N 3260 -270 3260 -220 {lab=POAVSS}
+N 3320 -200 3320 -180 {lab=POAVSS}
+N 3260 -200 3320 -200 {lab=POAVSS}
+N 3260 -220 3260 -200 {lab=POAVSS}
+N 3320 -150 3330 -150 {lab=POAVSS}
+N 3330 -150 3330 -100 {lab=POAVSS}
+N 3320 -100 3330 -100 {lab=POAVSS}
+N 3320 -120 3320 -100 {lab=POAVSS}
+N 3260 -100 3320 -100 {lab=POAVSS}
+N 3260 -150 3280 -150 {lab=POAVSS}
+N 3260 -200 3260 -150 {lab=POAVSS}
+N 3480 -200 3480 -180 {lab=POAVSS}
+N 3420 -200 3480 -200 {lab=POAVSS}
+N 3480 -150 3490 -150 {lab=POAVSS}
+N 3490 -150 3490 -100 {lab=POAVSS}
+N 3480 -100 3490 -100 {lab=POAVSS}
+N 3420 -150 3420 -100 {lab=POAVSS}
+N 3480 -120 3480 -100 {lab=POAVSS}
+N 3420 -100 3480 -100 {lab=POAVSS}
+N 3420 -150 3440 -150 {lab=POAVSS}
+N 3420 -200 3420 -150 {lab=POAVSS}
+N 3330 -100 3420 -100 {lab=POAVSS}
+N 3640 -200 3640 -180 {lab=POAVSS}
+N 3580 -200 3640 -200 {lab=POAVSS}
+N 3640 -150 3650 -150 {lab=POAVSS}
+N 3650 -150 3650 -100 {lab=POAVSS}
+N 3640 -100 3650 -100 {lab=POAVSS}
+N 3580 -150 3580 -100 {lab=POAVSS}
+N 3640 -120 3640 -100 {lab=POAVSS}
+N 3580 -100 3640 -100 {lab=POAVSS}
+N 3580 -150 3600 -150 {lab=POAVSS}
+N 3580 -200 3580 -150 {lab=POAVSS}
+N 3490 -100 3580 -100 {lab=POAVSS}
+N 3800 -200 3800 -180 {lab=POAVSS}
+N 3740 -200 3800 -200 {lab=POAVSS}
+N 3800 -150 3810 -150 {lab=POAVSS}
+N 3810 -150 3810 -100 {lab=POAVSS}
+N 3800 -100 3810 -100 {lab=POAVSS}
+N 3740 -150 3740 -100 {lab=POAVSS}
+N 3800 -120 3800 -100 {lab=POAVSS}
+N 3740 -100 3800 -100 {lab=POAVSS}
+N 3740 -150 3760 -150 {lab=POAVSS}
+N 3740 -200 3740 -150 {lab=POAVSS}
+N 3650 -100 3740 -100 {lab=POAVSS}
+N 3260 -150 3260 -100 {lab=POAVSS}
+N 2930 -100 2950 -100 {lab=POAVSS}
+N 3010 -150 3020 -150 {lab=POAVSS}
+N 3020 -150 3020 -100 {lab=POAVSS}
+N 3010 -100 3020 -100 {lab=POAVSS}
+N 2950 -200 3010 -200 {lab=POAVSS}
+N 3010 -200 3010 -180 {lab=POAVSS}
+N 2950 -200 2950 -100 {lab=POAVSS}
+N 3010 -120 3010 -100 {lab=POAVSS}
+N 2950 -100 3010 -100 {lab=POAVSS}
+N 3170 -150 3180 -150 {lab=POAVSS}
+N 3180 -150 3180 -100 {lab=POAVSS}
+N 3170 -100 3180 -100 {lab=POAVSS}
+N 3110 -200 3170 -200 {lab=POAVSS}
+N 3170 -200 3170 -180 {lab=POAVSS}
+N 3110 -200 3110 -100 {lab=POAVSS}
+N 3170 -120 3170 -100 {lab=POAVSS}
+N 3110 -100 3170 -100 {lab=POAVSS}
+N 3020 -100 3110 -100 {lab=POAVSS}
+N 3950 -860 3960 -860 {lab=POAVDD}
+N 3960 -900 3960 -860 {lab=POAVDD}
+N 4050 -860 4070 -860 {lab=pcasc}
+N 3890 -860 3910 -860 {lab=pcasc}
+N 4050 -910 4050 -860 {lab=pcasc}
+N 4110 -860 4120 -860 {lab=POAVDD}
+N 3950 -690 3960 -690 {lab=POAVSS}
+N 4110 -690 4120 -690 {lab=POAVSS}
+N 2930 -60 2960 -60 {lab=IOAIREF}
+N 2960 -150 2960 -60 {lab=IOAIREF}
+N 2960 -150 2970 -150 {lab=IOAIREF}
+N 2960 -60 3120 -60 {lab=IOAIREF}
+N 3120 -150 3120 -60 {lab=IOAIREF}
+N 3120 -150 3130 -150 {lab=IOAIREF}
+N 3160 -610 3160 -570 {lab=POAVSS}
+N 3090 -620 3250 -620 {lab=nbias}
+N 3150 -650 3160 -650 {lab=POAVSS}
+N 3150 -660 3150 -650 {lab=POAVSS}
+N 3160 -690 3160 -650 {lab=POAVSS}
+N 3150 -610 3150 -600 {lab=POAVSS}
+N 3150 -610 3160 -610 {lab=POAVSS}
+N 3160 -650 3160 -610 {lab=POAVSS}
+N 3000 -610 3000 -570 {lab=POAVSS}
+N 2990 -610 2990 -600 {lab=POAVSS}
+N 2990 -610 3000 -610 {lab=POAVSS}
+N 3000 -650 3000 -610 {lab=POAVSS}
+N 2990 -660 2990 -650 {lab=POAVSS}
+N 2990 -650 3000 -650 {lab=POAVSS}
+N 3000 -690 3000 -650 {lab=POAVSS}
+N 2930 -620 3090 -620 {lab=nbias}
+N 2930 -620 2930 -570 {lab=nbias}
+N 2880 -520 2990 -520 {lab=POAVSS}
+N 2880 -620 2930 -620 {lab=nbias}
+N 2880 -640 3570 -640 {lab=ncasc}
+N 3160 -900 3160 -860 {lab=POAVDD}
+N 3150 -950 3150 -940 {lab=POAVDD}
+N 3150 -940 3160 -940 {lab=POAVDD}
+N 3160 -980 3160 -940 {lab=POAVDD}
+N 3150 -900 3150 -890 {lab=POAVDD}
+N 3150 -900 3160 -900 {lab=POAVDD}
+N 3160 -940 3160 -900 {lab=POAVDD}
+N 2930 -930 3090 -930 {lab=pbias}
+N 3090 -930 3250 -930 {lab=pbias}
+N 2990 -950 2990 -940 {lab=POAVDD}
+N 2990 -940 3000 -940 {lab=POAVDD}
+N 3000 -980 3000 -940 {lab=POAVDD}
+N 2990 -900 2990 -890 {lab=POAVDD}
+N 2930 -980 2930 -930 {lab=pbias}
+N 2880 -930 2930 -930 {lab=pbias}
+N 3950 -830 3950 -820 {lab=POAVDD}
+N 3950 -820 3960 -820 {lab=POAVDD}
+N 3960 -860 3960 -820 {lab=POAVDD}
+N 4110 -830 4110 -820 {lab=POAVDD}
+N 4110 -820 4120 -820 {lab=POAVDD}
+N 4120 -860 4120 -820 {lab=POAVDD}
+N 3890 -910 3890 -860 {lab=pcasc}
+N 3950 -900 3950 -890 {lab=POAVDD}
+N 3950 -900 3960 -900 {lab=POAVDD}
+N 3960 -1030 3960 -900 {lab=POAVDD}
+N 3960 -1030 4120 -1030 {lab=POAVDD}
+N 4120 -900 4120 -860 {lab=POAVDD}
+N 4110 -900 4110 -890 {lab=POAVDD}
+N 4110 -900 4120 -900 {lab=POAVDD}
+N 4120 -1030 4120 -900 {lab=POAVDD}
+N 3890 -910 4050 -910 {lab=pcasc}
+N 3890 -690 3910 -690 {lab=ncasc}
+N 3890 -690 3890 -640 {lab=ncasc}
+N 3890 -640 4050 -640 {lab=ncasc}
+N 4050 -690 4070 -690 {lab=ncasc}
+N 4050 -690 4050 -640 {lab=ncasc}
+N 3950 -730 3950 -720 {lab=POAVSS}
+N 3950 -730 3960 -730 {lab=POAVSS}
+N 3960 -730 3960 -690 {lab=POAVSS}
+N 3960 -650 3960 -520 {lab=POAVSS}
+N 3950 -660 3950 -650 {lab=POAVSS}
+N 3950 -650 3960 -650 {lab=POAVSS}
+N 3960 -690 3960 -650 {lab=POAVSS}
+N 4110 -730 4110 -720 {lab=POAVSS}
+N 4110 -730 4120 -730 {lab=POAVSS}
+N 4120 -730 4120 -690 {lab=POAVSS}
+N 4120 -650 4120 -520 {lab=POAVSS}
+N 3960 -520 4120 -520 {lab=POAVSS}
+N 4110 -660 4110 -650 {lab=POAVSS}
+N 4110 -650 4120 -650 {lab=POAVSS}
+N 4120 -690 4120 -650 {lab=POAVSS}
+N 3630 -1030 3630 -1010 {lab=POAVDD}
+N 3790 -1030 3790 -1010 {lab=POAVDD}
+N 3730 -980 3730 -930 {lab=pbias}
+N 3630 -980 3640 -980 {lab=POAVDD}
+N 3640 -1030 3640 -980 {lab=POAVDD}
+N 3630 -1030 3640 -1030 {lab=POAVDD}
+N 3790 -980 3800 -980 {lab=POAVDD}
+N 3800 -1030 3800 -980 {lab=POAVDD}
+N 3790 -1030 3800 -1030 {lab=POAVDD}
+N 3730 -980 3750 -980 {lab=pbias}
+N 3570 -980 3590 -980 {lab=pbias}
+N 3630 -860 3640 -860 {lab=POAVDD}
+N 3570 -860 3590 -860 {lab=pcasc}
+N 3570 -910 3570 -860 {lab=pcasc}
+N 3790 -860 3800 -860 {lab=POAVDD}
+N 3730 -860 3750 -860 {lab=pcasc}
+N 3730 -910 3730 -860 {lab=pcasc}
+N 3630 -540 3630 -520 {lab=POAVSS}
+N 3570 -570 3590 -570 {lab=POAVSS}
+N 3630 -570 3640 -570 {lab=POAVSS}
+N 3640 -570 3640 -520 {lab=POAVSS}
+N 3630 -520 3640 -520 {lab=POAVSS}
+N 3790 -540 3790 -520 {lab=POAVSS}
+N 3730 -570 3750 -570 {lab=POAVSS}
+N 3790 -570 3800 -570 {lab=POAVSS}
+N 3800 -570 3800 -520 {lab=POAVSS}
+N 3790 -520 3800 -520 {lab=POAVSS}
+N 3570 -690 3590 -690 {lab=ncasc}
+N 3630 -690 3640 -690 {lab=POAVSS}
+N 3730 -690 3750 -690 {lab=ncasc}
+N 3790 -690 3800 -690 {lab=POAVSS}
+N 3800 -610 3800 -570 {lab=POAVSS}
+N 3790 -730 3790 -720 {lab=POAVSS}
+N 3800 -730 3800 -690 {lab=POAVSS}
+N 3790 -650 3800 -650 {lab=POAVSS}
+N 3790 -660 3790 -650 {lab=POAVSS}
+N 3800 -690 3800 -650 {lab=POAVSS}
+N 3790 -730 3800 -730 {lab=POAVSS}
+N 3790 -610 3790 -600 {lab=POAVSS}
+N 3790 -610 3800 -610 {lab=POAVSS}
+N 3800 -650 3800 -610 {lab=POAVSS}
+N 3630 -730 3630 -720 {lab=POAVSS}
+N 3630 -730 3640 -730 {lab=POAVSS}
+N 3640 -730 3640 -690 {lab=POAVSS}
+N 3640 -610 3640 -570 {lab=POAVSS}
+N 3630 -610 3630 -600 {lab=POAVSS}
+N 3630 -610 3640 -610 {lab=POAVSS}
+N 3630 -660 3630 -650 {lab=POAVSS}
+N 3630 -650 3640 -650 {lab=POAVSS}
+N 3640 -690 3640 -650 {lab=POAVSS}
+N 3800 -900 3800 -860 {lab=POAVDD}
+N 3790 -950 3790 -940 {lab=POAVDD}
+N 3790 -940 3800 -940 {lab=POAVDD}
+N 3800 -980 3800 -940 {lab=POAVDD}
+N 3790 -900 3790 -890 {lab=POAVDD}
+N 3790 -900 3800 -900 {lab=POAVDD}
+N 3800 -940 3800 -900 {lab=POAVDD}
+N 3570 -930 3730 -930 {lab=pbias}
+N 3790 -830 3790 -820 {lab=POAVDD}
+N 3790 -820 3800 -820 {lab=POAVDD}
+N 3800 -860 3800 -820 {lab=POAVDD}
+N 3630 -830 3630 -820 {lab=POAVDD}
+N 3630 -820 3640 -820 {lab=POAVDD}
+N 3640 -860 3640 -820 {lab=POAVDD}
+N 3630 -950 3630 -940 {lab=POAVDD}
+N 3630 -940 3640 -940 {lab=POAVDD}
+N 3640 -980 3640 -940 {lab=POAVDD}
+N 3570 -980 3570 -930 {lab=pbias}
+N 3730 -910 3890 -910 {lab=pcasc}
+N 3800 -1030 3960 -1030 {lab=POAVDD}
+N 3800 -520 3960 -520 {lab=POAVSS}
+N 3480 -1030 3630 -1030 {lab=POAVDD}
+N 3410 -930 3570 -930 {lab=pbias}
+N 3730 -640 3890 -640 {lab=ncasc}
+N 3570 -520 3630 -520 {lab=POAVSS}
+N 3640 -1030 3790 -1030 {lab=POAVDD}
+N 3730 -520 3790 -520 {lab=POAVSS}
+N 3180 -100 3260 -100 {lab=POAVSS}
+N 4270 -860 4280 -860 {lab=POAVDD}
+N 4280 -900 4280 -860 {lab=POAVDD}
+N 4370 -860 4390 -860 {lab=POAVDD}
+N 4210 -860 4230 -860 {lab=POAVDD}
+N 4370 -910 4370 -860 {lab=POAVDD}
+N 4430 -860 4440 -860 {lab=POAVDD}
+N 4270 -690 4280 -690 {lab=POAVSS}
+N 4430 -690 4440 -690 {lab=POAVSS}
+N 4270 -830 4270 -820 {lab=POAVDD}
+N 4270 -820 4280 -820 {lab=POAVDD}
+N 4280 -860 4280 -820 {lab=POAVDD}
+N 4430 -830 4430 -820 {lab=POAVDD}
+N 4430 -820 4440 -820 {lab=POAVDD}
+N 4440 -860 4440 -820 {lab=POAVDD}
+N 4210 -910 4210 -860 {lab=POAVDD}
+N 4270 -900 4270 -890 {lab=POAVDD}
+N 4270 -900 4280 -900 {lab=POAVDD}
+N 4280 -910 4280 -900 {lab=POAVDD}
+N 4280 -1030 4440 -1030 {lab=POAVDD}
+N 4440 -900 4440 -860 {lab=POAVDD}
+N 4430 -900 4430 -890 {lab=POAVDD}
+N 4430 -900 4440 -900 {lab=POAVDD}
+N 4440 -910 4440 -900 {lab=POAVDD}
+N 4210 -690 4230 -690 {lab=POAVSS}
+N 4210 -690 4210 -640 {lab=POAVSS}
+N 4370 -690 4390 -690 {lab=POAVSS}
+N 4370 -690 4370 -640 {lab=POAVSS}
+N 4270 -730 4270 -720 {lab=POAVSS}
+N 4270 -730 4280 -730 {lab=POAVSS}
+N 4280 -730 4280 -690 {lab=POAVSS}
+N 4280 -570 4280 -520 {lab=POAVSS}
+N 4270 -660 4270 -650 {lab=POAVSS}
+N 4270 -650 4280 -650 {lab=POAVSS}
+N 4280 -690 4280 -650 {lab=POAVSS}
+N 4430 -730 4430 -720 {lab=POAVSS}
+N 4430 -730 4440 -730 {lab=POAVSS}
+N 4440 -730 4440 -690 {lab=POAVSS}
+N 4440 -640 4440 -520 {lab=POAVSS}
+N 4280 -520 4440 -520 {lab=POAVSS}
+N 4430 -660 4430 -650 {lab=POAVSS}
+N 4430 -650 4440 -650 {lab=POAVSS}
+N 4440 -690 4440 -650 {lab=POAVSS}
+N 4270 -1030 4280 -1030 {lab=POAVDD}
+N 4270 -520 4280 -520 {lab=POAVSS}
+N 4210 -640 4280 -640 {lab=POAVSS}
+N 4280 -650 4280 -640 {lab=POAVSS}
+N 4370 -640 4440 -640 {lab=POAVSS}
+N 4440 -650 4440 -640 {lab=POAVSS}
+N 4370 -910 4440 -910 {lab=POAVDD}
+N 4440 -1030 4440 -910 {lab=POAVDD}
+N 4210 -910 4280 -910 {lab=POAVDD}
+N 4280 -940 4280 -910 {lab=POAVDD}
+N 4270 -610 4270 -600 {lab=POAVSS}
+N 4270 -610 4280 -610 {lab=POAVSS}
+N 4280 -640 4280 -610 {lab=POAVSS}
+N 4270 -570 4280 -570 {lab=POAVSS}
+N 4280 -610 4280 -570 {lab=POAVSS}
+N 4270 -540 4270 -520 {lab=POAVSS}
+N 4210 -520 4270 -520 {lab=POAVSS}
+N 4210 -570 4230 -570 {lab=POAVSS}
+N 4210 -570 4210 -520 {lab=POAVSS}
+N 4120 -520 4210 -520 {lab=POAVSS}
+N 4270 -1030 4270 -1010 {lab=POAVDD}
+N 4210 -1030 4270 -1030 {lab=POAVDD}
+N 4270 -980 4280 -980 {lab=POAVDD}
+N 4280 -1030 4280 -980 {lab=POAVDD}
+N 4270 -950 4270 -940 {lab=POAVDD}
+N 4270 -940 4280 -940 {lab=POAVDD}
+N 4280 -980 4280 -940 {lab=POAVDD}
+N 4210 -980 4230 -980 {lab=POAVDD}
+N 4210 -1030 4210 -980 {lab=POAVDD}
+N 4120 -1030 4210 -1030 {lab=POAVDD}
+N 3310 -950 3310 -940 {lab=POAVDD}
+N 3310 -940 3320 -940 {lab=POAVDD}
+N 3320 -980 3320 -940 {lab=POAVDD}
+N 3310 -900 3320 -900 {lab=POAVDD}
+N 3320 -940 3320 -900 {lab=POAVDD}
+N 3310 -900 3310 -890 {lab=POAVDD}
+N 3640 -900 3640 -860 {lab=POAVDD}
+N 3570 -910 3730 -910 {lab=pcasc}
+N 3630 -900 3630 -890 {lab=POAVDD}
+N 3630 -900 3640 -900 {lab=POAVDD}
+N 3640 -940 3640 -900 {lab=POAVDD}
+N 3470 -900 3470 -890 {lab=POAVDD}
+N 3470 -900 3480 -900 {lab=POAVDD}
+N 3480 -940 3480 -900 {lab=POAVDD}
+N 3470 -950 3470 -940 {lab=POAVDD}
+N 3470 -940 3480 -940 {lab=POAVDD}
+N 3480 -980 3480 -940 {lab=POAVDD}
+N 3310 -610 3310 -600 {lab=POAVSS}
+N 3310 -610 3320 -610 {lab=POAVSS}
+N 3320 -650 3320 -610 {lab=POAVSS}
+N 3470 -610 3470 -600 {lab=POAVSS}
+N 3470 -610 3480 -610 {lab=POAVSS}
+N 3480 -650 3480 -610 {lab=POAVSS}
+N 3640 -650 3640 -610 {lab=POAVSS}
+N 3730 -570 3730 -520 {lab=POAVSS}
+N 3640 -520 3730 -520 {lab=POAVSS}
+N 3570 -570 3570 -520 {lab=POAVSS}
+N 3480 -520 3570 -520 {lab=POAVSS}
+N 3570 -690 3570 -640 {lab=ncasc}
+N 3730 -690 3730 -640 {lab=ncasc}
+N 3570 -640 3730 -640 {lab=ncasc}
+N 3310 -660 3310 -650 {lab=POAVSS}
+N 3310 -650 3320 -650 {lab=POAVSS}
+N 3320 -690 3320 -650 {lab=POAVSS}
+N 3470 -660 3470 -650 {lab=POAVSS}
+N 3470 -650 3480 -650 {lab=POAVSS}
+N 3480 -690 3480 -650 {lab=POAVSS}
+N 120 -780 220 -780 {lab=IOADISABLE}
+N 2290 -510 2460 -510 {lab=ndrive}
+N 2200 -190 2610 -190 {lab=POAVSS}
+N 2290 -680 2460 -680 {lab=pdrive}
+N 2200 -1000 2610 -1000 {lab=POAVDD}
+N 3000 -900 3000 -860 {lab=POAVDD}
+N 2990 -900 3000 -900 {lab=POAVDD}
+N 3000 -940 3000 -900 {lab=POAVDD}
+N 2150 -680 2190 -680 {lab=pdrive}
+N 2150 -510 2190 -510 {lab=ndrive}
+N 3080 -770 3240 -770 {lab=IOADISABLE}
+N 2830 -770 2860 -770 {lab=IOADISABLE}
+N 2860 -690 2950 -690 {lab=IOADISABLE}
+N 2860 -770 2860 -690 {lab=IOADISABLE}
+N 2990 -750 2990 -720 {lab=nIOADISABLE}
+N 3150 -740 3150 -720 {lab=ntlg}
+N 3130 -740 3150 -740 {lab=ntlg}
+N 3290 -740 3310 -740 {lab=ndrive}
+N 3310 -740 3310 -720 {lab=ndrive}
+N 3080 -690 3110 -690 {lab=IOADISABLE}
+N 3080 -770 3080 -690 {lab=IOADISABLE}
+N 2860 -770 3080 -770 {lab=IOADISABLE}
+N 3240 -690 3270 -690 {lab=IOADISABLE}
+N 3240 -770 3240 -690 {lab=IOADISABLE}
+N 120 -190 210 -190 {lab=POAVSS}
+N 220 -660 220 -330 {lab=IOAIREF}
+N 120 -1000 390 -1000 {lab=POAVDD}
+N 3470 -740 3470 -720 {lab=IOAIREF}
+N 3450 -740 3470 -740 {lab=IOAIREF}
+N 3380 -690 3430 -690 {lab=IOADISABLE}
+N 3380 -770 3380 -690 {lab=IOADISABLE}
+N 3240 -770 3380 -770 {lab=IOADISABLE}
+N 2990 -1180 3000 -1180 {lab=POAVDD}
+N 3150 -1180 3160 -1180 {lab=POAVDD}
+N 3310 -1180 3320 -1180 {lab=POAVDD}
+N 3470 -1180 3480 -1180 {lab=POAVDD}
+N 3150 -1150 3150 -1130 {lab=ptlg}
+N 3470 -1150 3470 -1130 {lab=pcasc}
+N 2990 -1150 2990 -1110 {lab=nIOADISABLE}
+N 2970 -1110 2990 -1110 {lab=nIOADISABLE}
+N 3130 -1130 3150 -1130 {lab=ptlg}
+N 3080 -1180 3110 -1180 {lab=nIOADISABLE}
+N 3080 -1180 3080 -1110 {lab=nIOADISABLE}
+N 3240 -1180 3240 -1110 {lab=nIOADISABLE}
+N 3290 -1130 3310 -1130 {lab=pdrive}
+N 3310 -1150 3310 -1130 {lab=pdrive}
+N 3080 -1110 3240 -1110 {lab=nIOADISABLE}
+N 3240 -1180 3270 -1180 {lab=nIOADISABLE}
+N 2860 -1180 2950 -1180 {lab=IOADISABLE}
+N 3450 -1130 3470 -1130 {lab=pcasc}
+N 3400 -1180 3430 -1180 {lab=nIOADISABLE}
+N 3400 -1180 3400 -1110 {lab=nIOADISABLE}
+N 3240 -1110 3400 -1110 {lab=nIOADISABLE}
+N 3410 -910 3570 -910 {lab=pcasc}
+N 2930 -860 2950 -860 {lab=pcasc}
+N 2930 -910 2930 -860 {lab=pcasc}
+N 2880 -910 2930 -910 {lab=pcasc}
+N 3090 -860 3110 -860 {lab=pcasc}
+N 3090 -910 3090 -860 {lab=pcasc}
+N 2930 -910 3090 -910 {lab=pcasc}
+N 3250 -860 3270 -860 {lab=pcasc}
+N 3250 -910 3250 -860 {lab=pcasc}
+N 3090 -910 3250 -910 {lab=pcasc}
+N 3410 -860 3430 -860 {lab=pcasc}
+N 3410 -910 3410 -860 {lab=pcasc}
+N 3250 -910 3410 -910 {lab=pcasc}
+N 2990 -830 2990 -820 {lab=POAVDD}
+N 2990 -820 3000 -820 {lab=POAVDD}
+N 3000 -860 3000 -820 {lab=POAVDD}
+N 3150 -830 3150 -820 {lab=POAVDD}
+N 3150 -820 3160 -820 {lab=POAVDD}
+N 3160 -860 3160 -820 {lab=POAVDD}
+N 3310 -830 3310 -820 {lab=POAVDD}
+N 3310 -820 3320 -820 {lab=POAVDD}
+N 3320 -860 3320 -820 {lab=POAVDD}
+N 3480 -860 3480 -820 {lab=POAVDD}
+N 3470 -820 3480 -820 {lab=POAVDD}
+N 3470 -830 3470 -820 {lab=POAVDD}
+N 3000 -1230 3000 -1180 {lab=POAVDD}
+N 2990 -1230 2990 -1210 {lab=POAVDD}
+N 2970 -1230 2990 -1230 {lab=POAVDD}
+N 2990 -1230 3000 -1230 {lab=POAVDD}
+N 3470 -1230 3480 -1230 {lab=POAVDD}
+N 3480 -1230 3480 -1180 {lab=POAVDD}
+N 3470 -1230 3470 -1210 {lab=POAVDD}
+N 3320 -1230 3470 -1230 {lab=POAVDD}
+N 3320 -1230 3320 -1180 {lab=POAVDD}
+N 3310 -1230 3320 -1230 {lab=POAVDD}
+N 3310 -1230 3310 -1210 {lab=POAVDD}
+N 3160 -1230 3310 -1230 {lab=POAVDD}
+N 3160 -1230 3160 -1180 {lab=POAVDD}
+N 3150 -1230 3160 -1230 {lab=POAVDD}
+N 3150 -1230 3150 -1210 {lab=POAVDD}
+N 3000 -1230 3150 -1230 {lab=POAVDD}
+N 2990 -1110 3080 -1110 {lab=nIOADISABLE}
+C {title.sym} 160 0 0 0 {name=l1 author="Pascal Gesell"}
+C {iopin.sym} 120 -1000 0 1 {name=p3 lab=POAVDD
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 1130 -910 0 1 {name=MP13
+l=0.4u
+w=2.4u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 1130 -770 0 1 {name=MP14
+l=0.4u
+w=2.4u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 1090 -420 0 0 {name=MN16
+l=0.6u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 1090 -280 0 0 {name=MN13
+l=2.4u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 1260 -420 0 0 {name=MN18
+l=0.6u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 1260 -280 0 0 {name=MN17
+l=0.6u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 1260 -910 0 0 {name=MP10
+l=1.2u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 1260 -770 0 0 {name=MP12
+l=0.6u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {lab_wire.sym} 1430 -860 0 0 {name=p2 sig_type=std_logic lab=pbias}
+C {lab_wire.sym} 1430 -820 0 0 {name=p4 sig_type=std_logic lab=pcasc}
+C {lab_wire.sym} 1360 -710 0 0 {name=p5 sig_type=std_logic lab=ptlg}
+C {lab_wire.sym} 1360 -480 0 0 {name=p7 sig_type=std_logic lab=ntlg}
+C {lab_wire.sym} 1430 -370 0 0 {name=p8 sig_type=std_logic lab=ncasc}
+C {lab_wire.sym} 1430 -330 0 0 {name=p15 sig_type=std_logic lab=nbias}
+C {sg13g2_pr/sg13_hv_pmos.sym} 1540 -910 0 0 {name=MP1
+l=1.2u
+w=1.2u
+ng=1
+m=4
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 1760 -910 0 0 {name=MP2
+l=1.2u
+w=1.2u
+ng=1
+m=4
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 1540 -600 0 0 {name=MN1
+l=0.45u
+w=4.8u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 1800 -600 0 1 {name=MN2
+l=0.45u
+w=4.8u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {ipin.sym} 1490 -600 0 0 {name=p19 lab=IOAM}
+C {ipin.sym} 1850 -600 0 1 {name=p20 lab=IOAP}
+C {sg13g2_pr/sg13_hv_nmos.sym} 1650 -280 0 0 {name=MN3
+l=2.4u
+w=0.6u
+ng=1
+m=8
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 1650 -420 0 0 {name=MN6
+l=0.6u
+w=0.6u
+ng=1
+m=8
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 2010 -420 0 1 {name=MN7
+l=0.6u
+w=0.6u
+ng=1
+m=8
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 2170 -420 0 0 {name=MN8
+l=0.6u
+w=0.6u
+ng=1
+m=8
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 2010 -280 0 1 {name=MN4
+l=2.4u
+w=0.6u
+ng=1
+m=8
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 2170 -280 0 0 {name=MN5
+l=2.4u
+w=0.6u
+ng=1
+m=8
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 1970 -910 0 0 {name=MP3
+l=1.2u
+w=1.2u
+ng=1
+m=4
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 1970 -770 0 0 {name=MP5
+l=0.6u
+w=1.2u
+ng=1
+m=8
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 2170 -910 0 0 {name=MP4
+l=1.2u
+w=1.2u
+ng=1
+m=4
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 2170 -760 0 0 {name=MP6
+l=0.6u
+w=1.2u
+ng=1
+m=8
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 2170 -630 0 0 {name=MP7
+l=0.4u
+w=2.4u
+ng=1
+m=4
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 2270 -560 0 0 {name=MN9
+l=0.6u
+w=1.2u
+ng=1
+m=4
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {lab_wire.sym} 2100 -630 0 1 {name=p26 sig_type=std_logic lab=ptlg}
+C {lab_wire.sym} 2100 -560 0 1 {name=p27 sig_type=std_logic lab=ntlg}
+C {sg13g2_pr/sg13_hv_pmos.sym} 2590 -680 0 0 {name=MP8
+l=0.4u
+w=2.4u
+ng=1
+m=40
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 2590 -510 0 0 {name=MN10
+l=0.6u
+w=1.2u
+ng=1
+m=40
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/cap_cmim.sym} 2460 -550 0 0 {name=C2
+model=cap_cmim
+w=28.570e-6
+l=14e-6
+m=1
+spiceprefix=X}
+C {sg13g2_pr/cap_cmim.sym} 2460 -640 2 0 {name=C1
+model=cap_cmim
+w=28.570e-6
+l=14e-6
+m=1
+spiceprefix=X}
+C {opin.sym} 2680 -600 0 0 {name=p17 lab=OOA}
+C {ipin.sym} 120 -660 0 0 {name=p18 lab=IOAIREF}
+C {ngspice_probe.sym} 2340 -680 0 0 {name=r1}
+C {ngspice_probe.sym} 2340 -510 0 0 {name=r2}
+C {ngspice_probe.sym} 1560 -790 0 0 {name=r5}
+C {ngspice_probe.sym} 1780 -790 0 0 {name=r6}
+C {ngspice_probe.sym} 1690 -520 0 0 {name=r7}
+C {sg13g2_pr/annotate_fet_params.sym} 1790 -770 0 0 {name=annot4 ref=MN2
+}
+C {sg13g2_pr/annotate_fet_params.sym} 2500 -490 0 0 {name=annot5 ref=MN10
+}
+C {sg13g2_pr/annotate_fet_params.sym} 2500 -840 0 0 {name=annot7 ref=MP8
+}
+C {sg13g2_pr/annotate_fet_params.sym} 1450 -770 0 0 {name=annot8 ref=MN1
+}
+C {ngspice_probe.sym} 1280 -350 0 0 {name=r10}
+C {ngspice_probe.sym} 930 -320 0 0 {name=r11}
+C {sg13g2_pr/sg13_hv_nmos.sym} 240 -280 0 1 {name=MN20
+l=2.4u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 380 -280 0 0 {name=MN21
+l=2.4u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 550 -280 0 0 {name=MN22
+l=2.4u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 780 -240 0 1 {name=MN23
+l=10u
+w=0.4u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 950 -280 0 1 {name=MN25
+l=2.4u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 780 -560 0 1 {name=MN24
+l=10u
+w=0.4u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 910 -420 0 0 {name=MN26
+l=0.6u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 420 -710 0 1 {name=MP21
+l=10u
+w=1u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 420 -790 0 1 {name=MP20
+l=10.0u
+w=1u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 590 -910 0 1 {name=MP22
+l=1.2u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 550 -770 0 0 {name=MP25
+l=0.6u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 740 -770 0 0 {name=MP26
+l=0.6u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 740 -910 0 0 {name=MP23
+l=1.2u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 950 -910 0 1 {name=MP24
+l=1.2u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 950 -770 0 1 {name=MP27
+l=0.6u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 420 -870 0 1 {name=MP16
+l=10.0u
+w=1u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 780 -320 0 1 {name=MN11
+l=10u
+w=0.4u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 420 -950 0 1 {name=MP28
+l=10.0u
+w=1u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 780 -400 0 1 {name=MN12
+l=10u
+w=0.4u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 780 -480 0 1 {name=MN14
+l=10u
+w=0.4u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {iopin.sym} 120 -190 0 1 {name=p29 lab=POAVSS
+}
+C {ngspice_probe.sym} 760 -830 0 1 {name=r3}
+C {ngspice_probe.sym} 930 -830 0 0 {name=r4}
+C {ngspice_probe.sym} 760 -1000 0 1 {name=r8}
+C {sg13g2_pr/sg13_hv_pmos.sym} 2970 -980 0 0 {name=MDP1
+l=1.2u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 3130 -980 0 0 {name=MDP2
+l=1.2u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {lab_wire.sym} 2910 -1030 0 0 {name=p9 sig_type=std_logic lab=POAVDD}
+C {sg13g2_pr/sg13_hv_pmos.sym} 2970 -860 0 0 {name=MDOP1
+l=0.6u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 3130 -860 0 0 {name=MDOP2
+l=0.6u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 3290 -860 0 0 {name=MDOP3
+l=0.6u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 3450 -860 0 0 {name=MDOP4
+l=0.6u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 2970 -570 0 0 {name=MDN1
+l=2.4u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3130 -570 0 0 {name=MDN2
+l=2.4u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 2970 -690 0 0 {name=MDON1
+l=0.6u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3130 -690 0 0 {name=MDON2
+l=0.6u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3290 -690 0 0 {name=MDON3
+l=0.6u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3450 -690 0 0 {name=MDON4
+l=0.6u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 3290 -980 0 0 {name=MDP7
+l=1.2u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 3450 -980 0 0 {name=MDP8
+l=1.2u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3290 -570 0 0 {name=MDN7
+l=2.4u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3450 -570 0 0 {name=MDN8
+l=2.4u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {lab_wire.sym} 2880 -930 0 0 {name=p11 sig_type=std_logic lab=pbias}
+C {lab_wire.sym} 2880 -910 0 0 {name=p30 sig_type=std_logic lab=pcasc}
+C {lab_wire.sym} 2880 -640 0 0 {name=p31 sig_type=std_logic lab=ncasc}
+C {lab_wire.sym} 2880 -620 0 0 {name=p32 sig_type=std_logic lab=nbias}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3300 -390 0 0 {name=MDN9
+l=0.45u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3460 -390 0 0 {name=MDN10
+l=0.45u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3620 -390 0 0 {name=MDN11
+l=0.45u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3780 -390 0 0 {name=MDN12
+l=0.45u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3300 -270 0 0 {name=MDN13
+l=0.45u
+w=2.4u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3460 -270 0 0 {name=MDN14
+l=0.45u
+w=2.4u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3620 -270 0 0 {name=MDN15
+l=0.45u
+w=2.4u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3780 -270 0 0 {name=MDN16
+l=0.45u
+w=2.4u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3300 -150 0 0 {name=MDN17
+l=0.45u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3460 -150 0 0 {name=MDN18
+l=0.45u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3620 -150 0 0 {name=MDN19
+l=0.45u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3780 -150 0 0 {name=MDN20
+l=0.45u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {lab_wire.sym} 2880 -520 0 0 {name=p34 sig_type=std_logic lab=POAVSS}
+C {sg13g2_pr/sg13_hv_nmos.sym} 2990 -150 0 0 {name=MDN21
+l=2.4u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {lab_wire.sym} 2930 -100 0 0 {name=p35 sig_type=std_logic lab=POAVSS}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3150 -150 0 0 {name=MDN22
+l=2.4u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 3930 -860 0 0 {name=MDP9
+l=10u
+w=1u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3930 -690 0 0 {name=MDN23
+l=10u
+w=0.4u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 4090 -860 0 0 {name=MDP10
+l=10u
+w=1u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 4090 -690 0 0 {name=MDN24
+l=10u
+w=0.4u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {lab_wire.sym} 2930 -60 0 0 {name=p38 sig_type=std_logic lab=IOAIREF}
+C {sg13g2_pr/sg13_hv_pmos.sym} 3610 -980 0 0 {name=MDP11
+l=1.2u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 3770 -980 0 0 {name=MDP12
+l=1.2u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 3610 -860 0 0 {name=MDP13
+l=0.6u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 3770 -860 0 0 {name=MDP14
+l=0.6u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3610 -570 0 0 {name=MDN25
+l=2.4u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3770 -570 0 0 {name=MDN26
+l=2.4u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3610 -690 0 0 {name=MDN27
+l=0.6u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 3770 -690 0 0 {name=MDN28
+l=0.6u
+w=0.6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 4250 -860 0 0 {name=MDP15
+l=0.4u
+w=2.4u
+ng=1
+m=8
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 4250 -690 0 0 {name=MDN29
+l=0.6u
+w=1.2u
+ng=1
+m=8
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 4410 -860 0 0 {name=MDP16
+l=0.4u
+w=2.4u
+ng=1
+m=2
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 4410 -690 0 0 {name=MDN30
+l=0.6u
+w=1.2u
+ng=1
+m=2
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 4250 -980 0 0 {name=MDP17
+l=0.4u
+w=2.4u
+ng=1
+m=8
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 4250 -570 0 0 {name=MDN31
+l=0.6u
+w=1.2u
+ng=1
+m=8
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {ipin.sym} 120 -780 0 0 {name=p1 lab=IOADISABLE}
+C {lab_wire.sym} 220 -780 0 1 {name=p12 sig_type=std_logic lab=IOADISABLE}
+C {lab_wire.sym} 220 -660 0 1 {name=p21 sig_type=std_logic lab=IOAIREF}
+C {lab_wire.sym} 2990 -750 0 0 {name=p23 sig_type=std_logic lab=nIOADISABLE}
+C {lab_wire.sym} 2150 -680 0 0 {name=p24 sig_type=std_logic lab=pdrive}
+C {lab_wire.sym} 2150 -510 0 0 {name=p25 sig_type=std_logic lab=ndrive}
+C {lab_wire.sym} 2830 -770 0 0 {name=p33 sig_type=std_logic lab=IOADISABLE}
+C {lab_wire.sym} 3290 -740 0 0 {name=p36 sig_type=std_logic lab=ndrive}
+C {lab_wire.sym} 3130 -740 0 0 {name=p37 sig_type=std_logic lab=ntlg}
+C {lab_wire.sym} 3450 -740 0 0 {name=p14 sig_type=std_logic lab=IOAIREF}
+C {sg13g2_pr/sg13_hv_pmos.sym} 2970 -1180 0 0 {name=MDOP5
+l=0.6u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 3130 -1180 0 0 {name=MDOP6
+l=0.6u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 3290 -1180 0 0 {name=MDOP7
+l=0.6u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} 3450 -1180 0 0 {name=MDOP8
+l=0.6u
+w=1.2u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {lab_wire.sym} 3130 -1130 0 0 {name=p6 sig_type=std_logic lab=ptlg}
+C {lab_wire.sym} 2970 -1110 0 0 {name=p10 sig_type=std_logic lab=nIOADISABLE}
+C {lab_wire.sym} 3290 -1130 0 0 {name=p16 sig_type=std_logic lab=pdrive}
+C {lab_wire.sym} 3450 -1130 0 0 {name=p39 sig_type=std_logic lab=pcasc}
+C {lab_wire.sym} 2860 -1180 0 0 {name=p40 sig_type=std_logic lab=IOADISABLE}
+C {lab_wire.sym} 2970 -1230 0 0 {name=p13 sig_type=std_logic lab=POAVDD}
