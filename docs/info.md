@@ -50,7 +50,7 @@ The circuit not only contains the three mirrored current outputs, but also a sta
 
 The design of the operational amplifier is based on a simple two-stage, low-power design. The first stage is a differential pair with a current mirror load, while the second stage is a rail-to-rail output stage. The circuit is designed to operate at a supply voltage of 3.3 V with a bias current of 25 nA, which is provided by the PTAT current source. In addition to the typical op-amp pins (current-bias input, non-inverting input, inverting input and output), the op-amp also includes a disable pin (active-high), which is used to disable the internal op-amp circuit and to put the output in a high-impedance state.
 
-![Operational amplifier design](op_amp.png)
+![Operational amplifier design](opamp.png)
 
 The process corner simulations of the designed op-amp in the voltage follower configuration show unity gain up to 339 kHz in the worst case with a test load of 10 MΩ and 50 pF. Note that these preliminary simulation results were done with the schematic excluding any extracted parasitics.
 
