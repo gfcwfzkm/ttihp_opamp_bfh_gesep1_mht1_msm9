@@ -1,6 +1,6 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg)
 
-# Tiny Tapeout Analog Project Template
+# Operational Amplifier Test Circuits
 
 - [Read the documentation for project](docs/info.md)
 
