@@ -28,7 +28,7 @@ All three op-amp circuits share the same op-amp design and their outputs are con
 | 1             | 0             | Voltage follower active                               |
 | 1             | 1             | R2R DAC active                                        |
 
-To safe space and due to some LVS problems with the standard cell library, the 2-to-4 decoder is implemented directly using 1.2 V transistors.
+To save space and due to some LVS problems with the standard cell library, the 2-to-4 decoder is implemented directly using 1.2 V transistors.
 
 ![2-to-4 decoder](digital_decoder.svg)
 
